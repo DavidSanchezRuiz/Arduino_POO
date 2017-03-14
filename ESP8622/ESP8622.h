@@ -24,9 +24,8 @@ ESP8622::ESP8622() {
 boolean ESP8622::encenderESP(boolean depurar){
   iniciarESP(depurar);
   if (isNotConectado(depurar)) {
-    //sendData("AT+CWJAP=\"TelemaTICs\",\"Telematics305\"\r\n", 1000,depurar);
-    //sendData("AT+CWJAP=\"ArphaNet\",\"Uptc2016\"\r\n",1000,depurar);
-    sendData("AT+CWJAP=\"Movistar_87457016\",\"xs9gwpbu31\"\r\n", 1000, depurar);
+    
+    sendData("AT+CWJAP=\"nombrered\",\"clave\"\r\n", 1000, depurar);
     if (isNotConectado(depurar)){
       setError("No Conexion");
       return false;
